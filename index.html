@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gamer sign-up form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..700;1,400..700&family=Orbitron:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Your HTML content goes here -->
+    <div class="main-wrapper">
+      <div class="brand-column">
+        <div class="brand-wrapper">
+          <img src="./assets/images/logo.svg" alt="NEONCORE logo" />
+        </div>
+        <div class="content-caption">
+          <h1><span class="prefix-slashes">//</span> Join the nexus</h1>
+          <p>Initialize your NEONCORE identity</p>
+        </div>
+        <hr />
+        <div class="form-group">
+          <div class="input-group">
+            <span> Operator ID</span>
+            <span>[0]/5 ready</span>
+          </div>
+          <h2>Unassigned</h2>
+          <div class="input-field">
+            <div class="input-group">
+              <span> Callsign</span>
+              <span class="status-text">pending</span>
+            </div>
+            <div class="input-group">
+              <span>EMAIL</span>
+              <span class="status-text">pending</span>
+            </div>
+            <div class="input-group">
+              <span>PASSWORD</span>
+              <span class="status-text">pending</span>
+            </div>
+            <div class="input-group">
+              <span>CONFIRM</span>
+              <span class="status-text">pending</span>
+            </div>
+            <div class="input-group">
+              <span>TERMS</span>
+              <span class="status-text">REQUIRED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-wrapper">
+        <div class="login-form">
+          <div class="login-hint">
+            <span>new Operator</span>
+            <span>all fields required</span>
+          </div>
+          <hr />
+          <form action="#">
+            <div class="input-groups">
+              <label for="callsign">
+                <i class="fa-solid fa-angle-right"></i>Callsign</label
+              >
+              <input
+                class="form-input"
+                type="text"
+                id="callsign"
+                name="callsign"
+                placeholder="e.g Vortex_07"
+                required
+              />
+              <img
+                class="show-tick tick-1"
+                src="./assets/images/icon-tick-20.svg"
+                alt=""
+              />
+              <div class="error-message input-error-text"></div>
+              <p class="field-hint">
+                3-20 characters: letters, numbers, _ or -
+              </p>
+            </div>
+            <div class="input-groups">
+              <label for="email">
+                <i class="fa-solid fa-angle-right"></i>Email</label
+              >
+              <input
+                class="form-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+              <img
+                class="show-tick tick-2"
+                src="./assets/images/icon-tick-20.svg"
+                alt=""
+              />
+              <div class="error-message-2 input-error-text"></div>
+            </div>
+            <div class="input-groups">
+              <label for="password">
+                <i class="fa-solid fa-angle-right"></i>Password</label
+              >
+              <img class="icon-eye" src="./assets/images/icon-eye.svg" alt="" />
+              <input
+                class="form-input"
+                type="password"
+                id="password"
+                name="password"
+                required
+              />
+              <img
+                class="show-tick tick-3 tick-move-left"
+                src="./assets/images/icon-tick-20.svg"
+                alt=""
+              />
+              <div class="strength-container">
+                <div class="strength-1 js-line-1"></div>
+                <div class="strength-2 js-line-2"></div>
+                <div class="strength-3 js-line-3"></div>
+                <div class="strength-4 js-line-4"></div>
+                <div class="strength-text"></div>
+              </div>
+              <div class="error-message-3 input-error-text"></div>
+              <p class="field-hint">At least 8 characters</p>
+            </div>
+            <div class="input-groups">
+              <label for="confirm-password">
+                <i class="fa-solid fa-angle-right"></i>Confirm Password</label
+              >
+              <img class="icon-eye" src="./assets/images/icon-eye.svg" alt="" />
+              <input
+                class="form-input"
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+              />
+              <img
+                class="show-tick tick-4 tick-move-left"
+                src="./assets/images/icon-tick-20.svg"
+                alt=""
+              />
+              <div class="error-message-4 input-error-text"></div>
+            </div>
+            <div class="checkbox-terms">
+              <input
+                class="form-input"
+                type="checkbox"
+                id="terms"
+                name="terms"
+                required
+              />
+              <div class="error-message-5 input-error-text"></div>
+              <label for="terms"
+                >I agree the <a href="">Terms</a> and
+                <a href="">Privacy Policy</a>.</label
+              >
+            </div>
+            <button class="submit-btn" type="submit">Initialize account</button>
+            <span class="login-span"
+              >Already an operator? <a href="">Log in</a></span
+            >
+          </form>
+        </div>
+        <div id="success-card" class="success-card hidden">
+          <div class="success-icon">
+            <img src="./assets/images/icon-hex-check.svg" alt="" />
+          </div>
+
+          <h2 class="success-title">// HANDSHAKE COMPLETE</h2>
+          <p class="success-desc">
+            Operator
+            <span id="display-callsign" class="highlight-callsign"
+              >NeonRaider_99</span
+            >
+            provisioned. Your account is ready.
+          </p>
+
+          <button type="button" class="btn-continue">CONTINUE TO LOG IN</button>
+        </div>
+      </div>
+    </div>
+    <script src="./style.js" type="module"></script>
+  </body>
+</html>
